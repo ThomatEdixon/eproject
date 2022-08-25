@@ -1,0 +1,17 @@
+@font-face {
+    font-family: Open Sans;
+    src: url(../font/font-open-sans/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: Abril Fatface;
+    src: url(../font/SVN-Abril\ Fatface/SVN-AbrilFatface.ttf);
+}
+.register .terms{
+    text-decoration: none;
+}
+.register .h1{
+    font-family: Abril Fatface;
+}
+.register .check{
+    font-family: Open Sans;
+}

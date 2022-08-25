@@ -1,0 +1,38 @@
+@font-face {
+    font-family: Open Sans;
+    src: url(../font/font-open-sans/OpenSans-Semibold.ttf);
+}
+.login .login-form {
+    background-color: #542950;
+    border-radius: 10px;
+}
+.login .form-login-container{
+    margin: 20px;
+}
+.login .icon{
+    font-size: 1rem;
+    margin: 1rem;
+    padding: 0.5rem;
+}
+.login .h1{
+    padding-top: 1rem;
+    font-family: Open Sans;
+}
+.login .h1,.label-checkbox {
+    color : white;
+}
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+.login .forgot a{
+    text-decoration: none;
+    color: #ff0000e7;
+}
+.login .forgot a:hover{
+    text-decoration: underline;
+    color: blue;
+}

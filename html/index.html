@@ -5,10 +5,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fanimation</title>
+    <link rel="stylesheet" href="../css/introduction.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body ng-app = "myApp">
+        <div id="container">
+            <div id ="header" ng-controller="HeaderController">
+                <div id="header1">
+                    <nav class="nav">
+                        <a href="#/!" id="logo">
+                            <img src="../public/image/logo.png" alt="">
+                        </a>
+                        <ul id="main-menu">
+                            <li><a class="linkheader" href="#">Products</a>
+                                <ul class="sub-menu">
+                                    <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                    <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                    <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                </ul>
+                            </li> 
+                            <li><a class="linkheader" href="#">Help Center</a>
+                                <ul class="sub-menu">
+                                    <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                    <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                    <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                </ul></li>
+                            <li><a class="linkheader" href="#">Explore</a>
+                                <ul class="sub-menu">
+                                    <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                    <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                    <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                </ul></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header2">
+                    <div class="slide" style="height:40rem; position:relative"> <img class="slide1" src="../public/image/quat-tran-hunter/quattran5canh2trang.jpg" alt="">
+                        <div class="control prev" ng-click="prev()"><i class='bx bx-chevron-left'></i></div>
+                        <div class=" control next" ng-click="next()"><i class='bx bx-chevron-right'></i></div>
+                        <h2></h2>
+                </div>
+                <div class="list-img">
+                <div> <img class="anh1" src="../public/image/quat-tran-hunter/3canhden.jpg" alt=""></div>
+                <div><img src="../public/image/quat-tran-hunter/quattran5canh2trang.jpg" alt=""></div>
+                <div> <img src="../public/image/quat-tran-panasonic/quat-tran-mau-den/quattranden3canh.jpg" alt=""></div>
+                <div><img src="../public/image/quat-tran-panasonic/quat-tran-mau-trang/quattranpanasonic4canhtrang.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </div>
     
+    <div ng-view ></div>
 </body>
+<script>
+    var app = angular.module("myApp", ["ngRoute"]);
+    app.config(function($routeProvider){
+        $routeProvider
+        .when("/",{
+            templateUrl: "introduction.html"
+        })
+        .when("/login",{
+            templateUrl: "login.html"                                                               
+        })
+        .when("/register",{
+            templateUrl: "register.html"
+        });
+    })
+    app.controller("HeaderController",["$scope",function($scope) {
+        $scope.prev = function() {
+            var currentindex = 0;
+            var list_img = document.querySelectorAll('.list-img img');
+            var slide = document.querySelector('.slide1');
+            if(currentindex == 0){
+            currentindex = list_img.length - 1;
+            }else{
+                currentindex--;
+            }
+            $(".prev").click( e=>{
+                slide.style.opacity = '0';
+                setTimeout(() => {
+                    slide.src = list_img[currentindex].getAttribute('src');                
+                    slide.style.opacity = '1';
+                    }, 300)
+            }) 
+        }
+        $scope.next = function(){
+            var currentindex = 0;
+            var list_img = document.querySelectorAll('.list-img img');
+            var slide = document.querySelector('.slide1');
+            if(currentindex == list_img.length - 1){
+            currentindex = 0;
+            }else{
+                currentindex++;
+            }
+            $(".next").click( e=>{
+                slide.style.opacity = '0';
+                setTimeout(() => {
+                slide.src = list_img[currentindex].getAttribute('src');
+                slide.style.opacity = '1';
+                }, 300)
+            })
+        }
+    }])
+</script>
 </html>
