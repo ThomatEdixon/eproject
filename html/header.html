@@ -1,0 +1,88 @@
+<div>
+    <div id="container">
+        <div id="header">
+            <div id="header1">
+                <nav class="nav">
+                    <a href="" id="logo">
+                        <img src="../public/image/slide/logo.png">
+                    </a>
+                    <ul id="main-menu">
+                        <li><a class="linkheader" href="#">Products</a>
+                            <ul class="sub-menu">
+                                <li><a style=" color:#625d5d;" href="./product.html">Products</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="linkheader" href="#">Help Center</a>
+                            <ul class="sub-menu">
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="linkheader" href="#">Explore</a>
+                            <ul class="sub-menu">
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                                <li><a style=" color:#625d5d;" href="">Menu 1</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="list-img">
+
+                <div class="slide fade"> <img class="anh1" src="../public/image/slide/864269-Interior-Design-Living-room-Sofa-Armchair-Carpet.jpg">
+                    <a style="position: absolute; transition: 0.5s;  " href="#" class="text">Learn More</a>
+                    <div class="text2">fdsfdsfdsfd</div>
+                    <div class="text3">asdshadhdffssssssssssssssssssssssssssssssssssss
+                        fdddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
+                </div>
+                <div class="slide fade"><img style="object-position: 100% 30%;"
+                        src="../public/image/slide/762342-Interior-Design-Living-room-Carpet-Fireplace-Armchair.jpg"><a
+                        style="position: absolute; transition: 0.5s;" href="#" class="text">anh 2</a>
+                    <div class="text2">dsadsads</div>
+                </div>
+                <div class="slide fade"> <img style=" object-position: 100% 5%;"
+                        src="../public/image/slide/776403-Interior-Design-Living-room-Table-Armchair-Chandelier.jpg"><a
+                        style="position: absolute;transition: 0.5s;" href="#" class="text">anh 3</a>
+                    <div class="text2">dsadsads</div>
+                </div>
+                <div class="slide fade"><img style="object-position: 100% 15%;"
+                        src="../public/image/slide/780925-Interior-Design-Living-room-Carpet-Armchair-Table.jpg"><a
+                        style="position: absolute;transition: 0.5s;" href="#" class="text">anh 4</a>
+                    <div class="text2">dsadsads</div>
+                </div>
+                <div class="slide fade"><img style="object-position: 100% 15%;"
+                    src="../public/image/slide/826576-Interior-Design-Living-room-Sofa-Carpet-Chandelier.jpg"><a
+                    style="position: absolute;transition: 0.5s;" href="#" class="text">anh 5</a>
+                <div class="text2">dsadsads</div>
+            </div>
+            </div>
+        </div>
+        <div class="control prev" onclick="plusSlides(-1)"><i class='bx bx-chevron-left'></i></div>
+        <div class=" control next" onclick="plusSlides(1)"><i class='bx bx-chevron-right'></i></div>
+    </div>
+</div>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+ 
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slides[slideIndex-1].style.display = "block";  
+     
+    }
+</script>

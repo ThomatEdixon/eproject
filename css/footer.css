@@ -1,0 +1,88 @@
+.footer{
+    padding: 1rem;
+    background-color: #f9f9f9;;
+}
+@font-face {
+    font-family: Open Sans;
+    src: url(../font/font-open-sans/OpenSans-Regular.ttf);
+}
+.footer .aboutus{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
+    font-family: Open Sans;
+}
+.footer .aboutus .aboutus-address *{
+    padding-bottom: 0.2rem;
+}
+.footer .aboutus .aboutus-address h2{
+    color: #444245;
+    font-size: 1rem;
+    font: bold;
+}
+.footer .aboutus .aboutus-address .icon-about{
+    display: flex;
+    margin-top: 2rem;
+}
+.footer .aboutus .aboutus-address .icon-about .icon{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50% ;
+    background-color: #542950;
+    margin-right: 1rem;
+}
+.footer .aboutus .aboutus-address .icon-about .icon i{
+    height: 2rem;
+    line-height: 2rem;
+    padding-left: 8px;
+    justify-content: center;
+    color: white;    
+}
+.footer .aboutus .aboutus-list div{
+    margin-bottom: 0.5rem;
+}
+.footer .aboutus .aboutus-list a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+.footer .aboutus .aboutus-list a:hover{
+    color: #542950;
+}
+.footer .aboutus .aboutus-email{
+    margin-right: 3rem;
+}
+.footer .aboutus .aboutus-email form{
+    margin-top: 1rem;
+}
+.footer .aboutus .aboutus-email form .form{
+    display: flex;
+}
+.footer .aboutus .aboutus-email form .email-address input{
+    height: 3rem;
+    padding: 4px;
+    width: 14rem;
+    color: #ffff;
+    outline: none;
+    border: none;
+}
+.footer .aboutus .aboutus-email form .submit{
+    padding: 5px;
+    outline: none;
+    border: none;
+    width: 9rem;
+    background-color: #000000;
+    color: #ffffff;
+}
+.footer .aboutus .aboutus-email form .submit:hover{
+    background-color: #542950;
+}
+ .footer-tilte{
+    background-color: #434245;
+    margin: auto;
+    padding: 3rem 1rem;
+    color: #ffffff;
+    font-family: Open Sans;
+    font-size: 1rem;
+}

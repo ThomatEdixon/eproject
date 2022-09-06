@@ -22,7 +22,7 @@
             </div>
         </div>
     </div>
-    <div class=" body-product body-product-container container ">
+    <div class=" body-product body-product-container container" style="max-width: 85rem;">
         <div class="filter-product">
             <div class="toolbar-products toolbar-top d-flex align-items-center justify-content-center">
                 <div class="part-wrap part-filter-wrap">
@@ -35,13 +35,8 @@
                         <form class="fami-woocommerce-ordering" method="get">
                             <select name="orderby" class="orderby">
                                 <option value="popularity" selected="selected">Popularity</option>
-                                <option value="rating">Rating</option>
                                 <option value="date">Newness</option>
-                                <option value="price">Price: low</option>
-                                <option value="price-desc">Price: high</option>
                             </select>
-                            <input type="hidden" name="paged" value="1">
-                            <input type="hidden" name="offset" value="20">
                         </form>
                     </div>
                     <div class="part-products-size-wrap">
@@ -65,84 +60,29 @@
                     </div>
                 </div>
             </div>
-            <div class="prdctfltr_wc prdctfltr_woocommerce woocommerce prdctfltr_wc_regular pf_default prdctfltr_slide prdctfltr_click prdctfltr_rows prdctfltr_scroll_default pf_mod_multirow pf_adptv_default prdctfltr_round prdctfltr_hierarchy_circle prdctfltr_adoptive_reorder " data-page="1" data-loader="css-spinner-full-01" data-id="prdctfltr-6309d4042eda0">
-                <form  class="prdctfltr_woocommerce_ordering " method="get" style="display: block;">
-                    <div class="prdctfltr_filter_wrapper prdctfltr_columns_5 " data-columns="5">
-                        <div class = "container d-flex align-items-center justify-content-centre">
-                            <div class="prdctfltr_filter_inner row ">
-                                <div class="prdctfltr_filter prdctfltr_attributes prdctfltr_cat prdctfltr_single prdctfltr_adoptive prdctfltr_text col-3" data-filter="product_cat">
-                                    <input name="product_cat" type="hidden">
-                                    <span class="prdctfltr_regular_title">Categories <i class="prdctfltr-down"></i>
-                                    </span>
-                                    <div class="prdctfltr_add_scroll">
-                                        <div class="prdctfltr_checkboxes">
-                                            <div class=" prdctfltr_ft_accessories"><input type="radio" name="categories" value="accessories"><span>Accessories</span></div>
-                                            <div class=" prdctfltr_ft_lighting"><input type="radio" name="categories" value="lighting"><span>Lighting</span></div>
-                                            <div class=" prdctfltr_ft_controls-remotes"><input type="radio" name="categories" value="controls-remotes"><span>Controls and Remotes</span></div>
-                                            <div class=" prdctfltr_ft_blades"><input type="radio" name="categories" value="blades"><span>Blades</span></div>
-                                            <div class=" prdctfltr_ft_fans"><input type="radio" name="categories" value="fans"><span>Fans</span></div>
-                                        </div>
-                                    </div>
+            <div class="products-filter-form">
+                <form action="" method="get">
+                    <div class="filter-option">
+                        <div class="list-option">
+                            <div class="category">
+                                <h2 class="title">Categorys</h2>
+                                <div class="category-name">
+                                    <input type="radio" name="category" value="accessories"><label>Accessories</label>
+                                    <input type="radio" name="category" value="lighting"><label>Lighting</label>
+                                    <input type="radio" name="category" value="blades"><label>Blades</label>
+                                    <input type="radio" name="category" value="fans"><label>Fans</label>
                                 </div>
-                                <div class="prdctfltr_filter prdctfltr_attributes prdctfltr_pa_location-rating prdctfltr_single prdctfltr_adoptive prdctfltr_text col-3" data-filter="pa_location-rating">
-                                    <input name="pa_location-rating" type="hidden">
-                                    <span class="prdctfltr_regular_title">Location Rating <i class="prdctfltr-down"></i>
-                                    </span>
-                                    <div class="prdctfltr_add_scroll">
-                                        <div class="prdctfltr_checkboxes">
-                                            <div class=" prdctfltr_ft_damp"><input type="radio" name="rating" value="damp"><span>Damp</span></div>
-                                            <div class=" prdctfltr_ft_dry"><input type="radio" name="rating" value="dry"><span>Dry</span></div>
-                                            <div class=" prdctfltr_ft_wet"><input type="radio" name="rating" value="wet"><span>Wet</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="prdctfltr_filter prdctfltr_attributes prdctfltr_pa_sweep prdctfltr_single prdctfltr_adoptive prdctfltr_text col-3" data-filter="pa_sweep">
-                                    <input name="pa_sweep" type="hidden">
-                                    <span class="prdctfltr_regular_title">Sweep <i class="prdctfltr-down"></i>
-                                    </span>
-                                    <div class="prdctfltr_add_scroll">
-                                        <div class="prdctfltr_checkboxes">
-                                            <div class=" prdctfltr_ft_48-and-less"><input type="radio" name="sweep" value="48-and-less"><span>48" and less</span></div>
-                                            <div class=" prdctfltr_ft_49-60"><input type="radio" name="sweep" value="49-60"><span>49" - 60"</span></div>
-                                            <div class=" prdctfltr_ft_greater-than-60"><input type="radio" name="sweep" value="greater-than-60"><span>greater than 60"</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="prdctfltr_filter prdctfltr_attributes prdctfltr_pa_motor-type prdctfltr_single prdctfltr_adoptive prdctfltr_text col-3" data-filter="pa_motor-type">
-                                    <input name="pa_motor-type" type="hidden">
-                                    <span class="prdctfltr_regular_title">Motor Type <i class="prdctfltr-down"></i>
-                                    </span>
-                                    <div class="prdctfltr_add_scroll">
-                                        <div class="prdctfltr_checkboxes">
-                                            <div class=" prdctfltr_ft_ac-motor"><input type="radio" name="motor" value="ac-motor"><span>AC Motor</span></div>
-                                            <div class=" prdctfltr_ft_dc-motor"><input type="radio" name="motor" value="dc-motor"><span>DC Motor</span></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3 prdctfltr_filter prdctfltr_attributes prdctfltr_pa_energy-star prdctfltr_single prdctfltr_adoptive prdctfltr_clearnext prdctfltr_text" data-filter="pa_energy-star">
-                                    <input name="pa_energy-star" type="hidden">
-                                    <span class="prdctfltr_regular_title">Energy Star <i class="prdctfltr-down"></i>
-                                    </span>
-                                    <div class="prdctfltr_add_scroll">
-                                        <div class="prdctfltr_checkboxes">
-                                            <div class=" prdctfltr_ft_yes"><input type="radio" name="yes" value="yes"><span>Yes</span></div>
-                                        </div>
-                                    </div>
+                            </div>
+                            <div class="brand">
+                                <h2 class="title">Brand</h2>
+                                <div class="brand-name">
+                                    <input type="radio" name="brand" value=""><label></label>
+                                    <input type="radio" name="brand" value=""><label></label>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-                    <div class="prdctfltr_add_inputs">
-                    </div>
-                    <div class="prdctfltr_buttons">
-                        <a class="button prdctfltr_woocommerce_filter_submit" href="#">
-                            Filter Selected </a>
-                    </div>
-
                 </form>
-
 
             </div>
         </div>
