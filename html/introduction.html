@@ -1,4 +1,36 @@
 <div class="introduction">
+    <div class="list-img">
+
+        <div class="slide fade"> <img class="anh1"
+                src="../public/image/slide/864269-Interior-Design-Living-room-Sofa-Armchair-Carpet.jpg">
+            <a style="position: absolute; transition: 0.5s;  " href="#" class="text">Learn More</a>
+            <div class="text2">fdsfdsfdsfd</div>
+            <div class="text3">asdshadhdffssssssssssssssssssssssssssssssssssss
+                fdddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</div>
+        </div>
+        <div class="slide fade"><img style="object-position: 100% 30%;"
+                src="../public/image/slide/762342-Interior-Design-Living-room-Carpet-Fireplace-Armchair.jpg"><a
+                style="position: absolute; transition: 0.5s;" href="#" class="text">anh 2</a>
+            <div class="text2">dsadsads</div>
+        </div>
+        <div class="slide fade"> <img style=" object-position: 100% 5%;"
+                src="../public/image/slide/776403-Interior-Design-Living-room-Table-Armchair-Chandelier.jpg"><a
+                style="position: absolute;transition: 0.5s;" href="#" class="text">anh 3</a>
+            <div class="text2">dsadsads</div>
+        </div>
+        <div class="slide fade"><img style="object-position: 100% 15%;"
+                src="../public/image/slide/780925-Interior-Design-Living-room-Carpet-Armchair-Table.jpg"><a
+                style="position: absolute;transition: 0.5s;" href="#" class="text">anh 4</a>
+            <div class="text2">dsadsads</div>
+        </div>
+        <div class="slide fade"><img style="object-position: 100% 15%;"
+                src="../public/image/slide/826576-Interior-Design-Living-room-Sofa-Carpet-Chandelier.jpg"><a
+                style="position: absolute;transition: 0.5s;" href="#" class="text">anh 5</a>
+            <div class="text2">dsadsads</div>
+        </div>
+    </div>
+    <div class="control prev" onclick="plusSlides(-1)"><i class='bx bx-chevron-left'></i></div>
+    <div class=" control next" onclick="plusSlides(1)"><i class='bx bx-chevron-right'></i></div>
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -32,8 +64,8 @@
                                             <div class="content-p">
                                                 <p>Installing a fan in your favorite indoor space? Or adding one to your outdoor haven? The location determines the fan rating (dry, damp and wet) you need. From there, the fun begins as you choose a style that fits you!</p>
                                             </div>
-                                            <div class="">
-                                                <a class="btn btn-primary btn-learn-more">LEARN MORE</a>
+                                            <div class="btn-learn-more-introduction">
+                                                <a href="#" class="btn btn-primary btn-learn-more">LEARN MORE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -84,7 +116,28 @@
             <p>Fanimation’s focus is producing creative and functional fans that provide ultimate personal comfort using the latest technology for energy efficiency and seamless control.</p>
         </div>
         <div class="content"> 
-            <a href="#!product" class="btn btn-primary btn-learn-more">LEARN MORE</a>
+            <a href="../php/product.php" class="btn btn-primary btn-learn-more">LEARN MORE</a>
         </div>
     </div>
 </div>
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex - 1].style.display = "block";
+
+    }
+</script>       

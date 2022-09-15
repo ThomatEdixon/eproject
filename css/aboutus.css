@@ -1,0 +1,91 @@
+.about{
+    background-color: #f0f0f0;
+}
+.about .body-about-container {
+    margin: auto;
+    background-color: #FFFFFF;
+    padding-top: 3rem;
+}
+.about .header-about{
+    background-image: url(../public/image/image-use-layout/contact-header-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    min-height: 37.5rem;
+    margin-top: 0px;
+    margin-bottom: 5rem; 
+}
+@font-face {
+    font-family: Open Sans;
+    src: url(../font/font-open-sans/OpenSans-Regular.ttf);
+}
+.about .header-about .about-title{
+    margin: 0%;
+    padding: 15rem;
+    color: #FFFFFF;
+    font-family: Open Sans, Helvetica, cursive;
+}
+.about .header-about .about-title h1{
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+.about .header-about .about-description-header{
+    font-size: 0.95rem;
+}
+.about .header-about .about-description-header a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.about .header-about .about-description-header a:hover{
+    color: #542950;
+}
+.about .about-text {
+    margin-left: 2rem;
+}
+.about .about-text h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.about .about-text p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+}
+.about .about-description {
+    margin-left: 4rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 4rem;
+}
+/* .about .about-description .about-description-list{
+    margin-right: 10rem;
+} */
+.about .about-description .about-description-list .icon-content{
+    color: #444245;
+    font-size: 1.2rem;
+}
+.about .about-description .icon-about {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50% ;
+    background-color: #542950;
+    color: #FFFFFF;
+    margin-top: 3rem;
+}
+.about .about-description .icon-about {
+    padding-left: 1.2rem;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+.about .about-description .icon-about i{
+    font-size: 2rem;
+}
+.about .about-description .about-last-child p{
+    color: #444245;
+    font-size: 1.2rem;
+}

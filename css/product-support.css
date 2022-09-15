@@ -1,0 +1,223 @@
+/* .product-support{
+    background-color: #f0f0f0;
+} */
+.product-support .body-product-support-container {
+    margin: auto;
+    background-color: #FFFFFF;
+    padding-top: 3rem;
+}
+.header-product-support{
+    background-image: url(../public/image/image-use-layout/header-product-support.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    min-height: 37.5rem;
+    margin-top: 0px;
+    margin-bottom: 0rem; 
+}
+
+@font-face {
+    font-family: Open Sans;
+    src: url(../font/font-open-sans/OpenSans-Regular.ttf);
+}
+.header-product-support .product-support-title{
+    margin: 0%;
+    padding: 15rem;
+    color: #FFFFFF;
+    font-family: Open Sans, Helvetica, cursive;
+}
+.header-product-support .product-support-title h1{
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+.header-product-support .product-support-description-header{
+    font-size: 0.95rem;
+}
+.header-product-support .product-support-description-header a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.header-product-support .product-support-description-header a:hover{
+    color: #542950;
+}
+.product-support .product-support-introduction {
+    margin: 2rem;
+}
+.product-support .product-support-introduction h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 4rem;
+}
+.product-support .product-support-introduction p {
+    text-align: center;
+    margin-left: 10rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-right: 10rem;
+}
+.product-support .product-support-introduction .btn-support{
+    margin-top: 2rem;
+    margin-left: 32rem;
+    height: 2rem;
+    width: 25rem;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+.product-support .product-support-introduction .btn-support a{
+    text-decoration: none;
+    background-color: #542950;
+    color: #FFFFFF;
+    padding: 1rem;
+}
+.product-support .product-support-introduction .btn-support a:hover{
+    background-color: #444245;
+}
+.product-support .content-support-introduction {
+    background-color: #f0f0f0;
+    padding: 4rem;
+    margin-top: 6rem;
+}
+.product-support .content-support-introduction .content-support-introduction-title {
+    font-size: 3rem;
+    text-align: center;
+}
+.product-support .content-support-introduction strong {
+    color: #444245;
+    font-size: 1.3rem;
+}
+.product-support .content-support-introduction p {
+    font-size: 1.2rem;
+}
+.product-support .product-support-problems {
+    margin: 4rem;
+}
+.product-support .product-support-problems-content {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-align: center;
+}
+.product-support .product-support-problems>p {
+    text-align: center;
+    font-size: 1.3rem;
+}
+.product-support .product-support-problems .list-questions {
+    margin-left: 6rem;
+}
+.product-support .product-support-problems .list-questions h2 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    color:#542950;
+    text-transform: uppercase;
+}
+.product-support .product-support-problems .list-questions p{
+    margin-left: 2rem;
+    font-size: 1.3rem;
+    color: #444245;
+}
+.product-support .form-support{
+    background-color: #f0f0f0;
+    padding: 4rem;
+    margin-top: 6rem;
+}
+.product-support .form-support input{
+    outline: none;
+}
+.product-support .form-support p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    padding-top: 2rem;
+}
+.product-support .form-support .information-user{
+    margin-left: 2rem;
+    display: flex;
+}
+.product-support .form-support .information-user .list-information{
+    margin-right: 15rem;
+}
+.product-support .form-support .information-user .list-information label{
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+.product-support .form-support .information-user .list-information input {
+    width: 15rem;
+    height: 4rem;
+    padding: 1rem;
+}
+.product-support .form-support .address-user {
+    margin-top: 2rem;
+    margin-left: 2rem;
+}
+.product-support .form-support .address-user label{
+    margin-bottom: 1rem;
+}
+.product-support .form-support .list-information-address>input {
+    width: 100%;
+    padding: 0.9rem 0.2rem;
+    font-size: 1.3rem;
+}
+.product-support .form-support .address-city {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+}
+.product-support .form-support .address-city input{
+    width: 50%;
+    padding: 0.9rem 0.2rem;
+    font-size: 1.3rem;
+}
+.product-support .form-support .address-city>input:first-child{
+    margin-right: 1rem;
+}
+.product-support .form-support .address-postcode input {
+    width: 49.5%;
+    padding: 0.9rem 0.2rem;
+    font-size: 1.3rem;
+}
+.product-support .form-support .question-user {
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.product-support .form-support .question-user label{
+    margin-bottom: 1rem;
+}
+.product-support .form-support .question-user input{
+    width: 70%;
+    padding: 0.9rem 0.2rem;
+    font-size: 1.3rem;
+}
+.product-support .form-support .problem-user{
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.product-support .form-support .problem-user label{
+    margin-bottom: 1rem;
+}
+.product-support .form-support .problem-user input{
+    width: 100%;
+    padding: 0.9rem 0.2rem;
+    height: 10rem;
+}
+.product-support .form-support .form-support-submit{
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+.product-support .form-support .form-support-submit input{
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background-color: #542950;
+    color: #f0f0f0;
+    border: #542950;
+}
+.product-support .support-comments{
+    margin-top: 3rem;
+}
+.product-support .support-comments p{
+    margin-top: 2rem;
+    color: #444245;
+    font-size: 1.5rem;
+    margin-left: 8rem;
+}

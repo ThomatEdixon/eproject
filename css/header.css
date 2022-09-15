@@ -39,13 +39,16 @@
     position: relative;
 }
 #header #main-menu li a{
-    color: white;
+    /* color: white; */
     text-decoration: none;
     display: block;
     padding: 25px 25px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
     height: 3.5rem;
+}
+#header .linkheader a{
+  color: #ffffff;
 }
 
 /* sub menu */
@@ -72,16 +75,16 @@
 }
 
 /* hover gach duoi */
-#header a,a:visited,a:hover,a:active{
+#header a,a:hover{
     -webkit-backface-visibility:hidden;
             backface-visibility:hidden;
-    position:relative;
+    /* position:relative; */
     transition:0.5s color ease;
     text-decoration:none;
     
   }
 
-  #header  a.linkheader:after{
+  #header .linkheader a:after{
     content: "";
     transition:0.5s all ease;
     -webkit-backface-visibility:hidden;
@@ -89,17 +92,17 @@
     position:absolute;
   }
 
-  #header  a.linkheader:after{
+  #header .linkheader a:after{
     bottom: -0.01rem;
   }
-  #header a.linkheader:after{
+  #header .linkheader a:after{
     height:5px;
     height:0.15rem;
     width:0;
     background:white;
   }
   
-  #header a.linkheader:after{
+  #header .linkheader a:after{
     left:50%;
     -webkit-transform:translateX(-50%);
             transform:translateX(-50%);
@@ -108,105 +111,10 @@
     width:60%;
   }
 
-  #header img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: 100% -4px;
-  }
-  #header .control{
-    position: absolute;
-    top: 40%;
-    font-size: 70px;
-    color: White;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-  #header .prev{
-    left: 10px;
-    transition: 2s ease;
-  }
-  #header .next{
-    right: 10px;
-    transition: 2s ease;
-  }
-  /* .list-img img{
-    display: none;
-  } */
-  
-  /* hieu ung chuyen slide */
-  #header .slide1{
-    transition: 1s;
-    z-index: 1;
-  }
-  
-  #header .list-img{
-    position: relative;
-    height: 35rem;
-  }
-  #header .slide{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
-  #header .text{
-    top: 75%;
-    right: 50%;
-    color: rgb(247, 248, 244);
-    font-size: 1.25rem;
-    transform: translateX(50%) translateY(-50%);
-    border: 1px rgb(248, 248, 248) solid;
-    padding: 0.01rem;
-    width: 8rem;
-    height: 2.5rem;
-    padding-top: 5px;
-    text-align: center;
-    font-weight: 6px;
-    background-color: rgba(0, 0, 0, 0.2);
-    font-family: Open Sans;
-    align-items: center;
-  }
-  /* sub menu */
-  #header .text:hover{
-  border: 1px solid rgb(170, 166, 166);
- }
- #header .text2{
-  top: 45%;
-    right: 55%;
-    color: rgb(247, 248, 244);
-    font-size: 6rem;
-    transform: translateX(50%) translateY(-50%);
-    position: absolute;
-    width: 40rem;
-    height: 2.5rem;
-    padding-top: 5px;
-    text-align: center;
-    font-weight: 6px;
-    font-family: Open Sans;
-    word-wrap: break-word;
-    align-items: center;
- } 
- #header .text3{
-  top: 64%;
-  right: 50%;
-  color: rgb(247, 248, 244);
-  font-size: 1rem;
-  transform: translateX(50%) translateY(-50%);
-  position: absolute;
-  width:30rem;
-  height: 2.5rem;
-  padding-top: 5px;
-  text-align: center;
-  font-weight: 6px;
-  font-family: 'Open Sans';
-  word-wrap: break-word;
- }
+#header .active{
+  background-color: #ffffff;
 
- #header .fade{
-  animation-name: fade;
-  animation-duration: 1s;
 }
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
+#header .active a.link-product{
+  color: #53284f;
 }

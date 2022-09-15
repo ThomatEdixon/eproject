@@ -1,5 +1,7 @@
 .footer{
-    padding: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 4rem;
     background-color: #f9f9f9;;
 }
 @font-face {
@@ -81,7 +83,7 @@
  .footer-tilte{
     background-color: #434245;
     margin: auto;
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
     color: #ffffff;
     font-family: Open Sans;
     font-size: 1rem;

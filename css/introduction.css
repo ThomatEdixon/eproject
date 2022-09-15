@@ -10,8 +10,113 @@
         left: 800px;
     }
   }
-.introduction{
+/* .introduction{
     margin-top: 3rem;
+} */
+.introduction .list-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 100% -4px;
+  }
+  .introduction .control{
+    position: absolute;
+    top: 40%;
+    font-size: 70px;
+    color: White;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  .introduction .prev{
+    left: 10px;
+    transition: 2s ease;
+  }
+  .introduction .next{
+    right: 10px;
+    transition: 2s ease;
+  }
+  /* .list-img img{
+    display: none;
+  } */
+  
+  /* hieu ung chuyen slide */
+  .introduction .slide1{
+    transition: 1s;
+    z-index: 1;
+  }
+  
+  .introduction .list-img{
+    position: relative;
+    height: 35rem;
+  }
+  .introduction .slide{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .introduction .slide a{
+    text-decoration: none;
+  }
+  .introduction .text{
+    top: 75%;
+    right: 50%;
+    color: rgb(247, 248, 244);
+    font-size: 1.25rem;
+    transform: translateX(50%) translateY(-50%);
+    border: 1px rgb(248, 248, 248) solid;
+    padding: 0.01rem;
+    width: 8rem;
+    height: 2.5rem;
+    padding-top: 5px;
+    text-align: center;
+    font-weight: 6px;
+    background-color: rgba(0, 0, 0, 0.2);
+    font-family: Open Sans;
+    align-items: center;
+  }
+  /* sub menu */
+  .introduction .text:hover{
+  border: 1px solid rgb(170, 166, 166);
+ }
+ .introduction .text2{
+  top: 45%;
+    right: 55%;
+    color: rgb(247, 248, 244);
+    font-size: 6rem;
+    transform: translateX(50%) translateY(-50%);
+    position: absolute;
+    width: 40rem;
+    height: 2.5rem;
+    padding-top: 5px;
+    text-align: center;
+    font-weight: 6px;
+    font-family: Open Sans;
+    word-wrap: break-word;
+    align-items: center;
+ } 
+ .introduction .text3{
+  top: 64%;
+  right: 50%;
+  color: rgb(247, 248, 244);
+  font-size: 1rem;
+  transform: translateX(50%) translateY(-50%);
+  position: absolute;
+  width:30rem;
+  height: 2.5rem;
+  padding-top: 5px;
+  text-align: center;
+  font-weight: 6px;
+  font-family: 'Open Sans';
+  word-wrap: break-word;
+ }
+
+ .introduction .fade{
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
 }
 .introduction .content-introduction{
     font-size: 18px;
@@ -20,12 +125,15 @@
     text-align: center;
     font-family:Open Sans;
     font-weight:400;
-    font-style:normal
+    font-style:normal;
+    margin-top: 3rem;
 }
 .introduction .content-introduction .content{
     width: 50%;
     padding: 15px 5px;
     box-sizing: border-box;
+    margin-left: 25rem;
+    font-size: 1rem;
 }
 .introduction .wbp-wrapper .figure {
     display: flex;
@@ -57,6 +165,9 @@
     font-size: 3rem;
     font-family:Open Sans;
 }
+.introduction .wbp-wrapper-content .content-p {
+    margin-bottom: 2rem;
+}
 .introduction .wbp-wrapper-content .content-p p{
     font-size: 1.4rem;
     font-family: Open Sans;
@@ -64,10 +175,22 @@
     box-sizing: border-box;
     padding-bottom: 20px;
 }
+.introduction .wbp-wrapper-content .btn-learn-more-introduction{
+    margin-bottom: 2rem;
+}
 .introduction .wbp-wrapper-content .btn-learn-more {
     background-color: #542950;
     outline: none;
     border: #542950;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #ffffff;
+    margin-bottom: 3rem;
+}
+.introduction .wbp-wrapper-content .btn-learn-more:hover{
+    color: #542950;
+    background-color: #ffffff;
 }
 .introduction .wbp-wrapper-content-introduction .wbp-wrapper-content-introduction-detail{
     background-color: #f1f0ee;
@@ -83,7 +206,7 @@
 }
 .introduction .wbp-wrapper .img-home{
     width: 800px;
-    margin-top: 100px;
+    margin-top: 130px;
 }
 .introduction .wbp-wrapper .img-home img{
     width: 600px;
@@ -105,8 +228,9 @@
 }
 .introduction .img-logo {
     margin-top: 50px;
-    /* display: flex;
-    flex-wrap: wrap; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: 60px;
     /* margin-left: 10rem; */
     box-sizing: border-box;
@@ -174,14 +298,13 @@
     margin-left: 4rem;
 }
 .introduction .content-functionality .btn-learn-more {
-    background-color: #542950;
-    border-radius: 5px solid;
+    background-color: #ffffff;
+    padding: 10px;
     border-color: #f1f0ee ;
     margin-left: 6rem;
+    text-decoration: none;
+    color: #542950;
 }
 .introduction .content-functionality .btn-learn-more:hover  {
-    background-color: #f1f0ee;
-    border-radius: 5px solid;
-    border-color: #f1f0ee ;
-    color: #542950;
+    color: #5e5a5b;
 }

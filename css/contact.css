@@ -1,0 +1,223 @@
+/* .contact{
+    background-color: #f0f0f0;
+} */
+.contact .body-contact-container {
+    margin: auto;
+    background-color: #FFFFFF;
+    padding-top: 3rem;
+}
+.contact .header-contact{
+    background-image: url(../public/image/image-use-layout/contact-header-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    min-height: 37.5rem;
+    margin-top: 0px;
+    margin-bottom: 5rem; 
+}
+
+@font-face {
+    font-family: Open Sans;
+    src: url(../font/font-open-sans/OpenSans-Regular.ttf);
+}
+.contact .header-contact .contact-title{
+    margin: 0%;
+    padding: 15rem;
+    color: #FFFFFF;
+    font-family: Open Sans, Helvetica, cursive;
+}
+.contact .header-contact .contact-title h1{
+    font-size: 3.75rem;
+    line-height: 1;
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+.contact .header-contact .contact-description{
+    font-size: 0.95rem;
+}
+.contact .header-contact .contact-description a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.contact .header-contact .contact-description a:hover{
+    color: #542950;
+}
+.contact .contact-title-header {
+    margin: 10px;
+    background-color: #542950;
+    color: #f0f0f0;
+    padding : 3rem;
+}
+.contact .contact-title-header h2{
+    font-size: 2rem;
+    margin: 0px 0px 20px ;
+    padding: 0px 0px 15px;
+}
+.contact .contact-title-header .contact-support{
+    display: flex;
+    justify-content: space-between;
+}
+.contact .contact-title-header .contact-support p{
+    font-size: 1.5rem;
+}
+.contact .contact-title-header .contact-support a {
+    text-decoration: none;
+    color: #542950;
+    background-color: #FFFFFF;
+    height: 3rem;
+    padding: 10px;
+}
+.contact .form-contact {
+    margin-top: 5rem;
+    padding: 4rem;
+}
+.contact .form-contact h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #444245;
+}
+.contact .form-contact p.title{
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #444245;
+    width: 70%;
+    margin-left: 14rem;
+    margin-bottom: 3rem;
+}
+.contact .form-contact .contact-name {
+    display: flex;
+    justify-content: center;
+}
+.contact .form-contact .contact-name .first-name *{
+    margin-right: 10rem;
+}
+.contact .form-contact .contact-name .first-name label{
+    font-size: 1.4rem;
+    color: #333333;
+    font: bolder;
+}
+.contact .form-contact .contact-name .first-name input{
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 25rem;
+    outline: #542950;
+}
+.contact .form-contact .contact-name .last-name>*{
+    margin-left: 10rem;
+}
+.contact .form-contact .contact-name .last-name label{
+    font-size: 1.4rem;
+    color: #333333;
+    font: bolder;
+}
+.contact .form-contact .contact-name .last-name input{
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 25rem;
+    outline: #542950;
+}
+/* css problem*/
+.contact .form-contact .contact-organization {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.contact .form-contact .contact-organization .problems *{
+    margin-right: 4.3rem;
+}
+.contact .form-contact .contact-organization .problems label{
+    font-size: 1.4rem;
+    color: #333333;
+    font: bolder;
+}
+.contact .form-contact .contact-organization .problems input{
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 35rem;
+    height: 9rem;
+    outline: #542950;
+}
+.contact .form-contact .contact-organization .organization>*{
+    margin-left: 2rem;
+}
+.contact .form-contact .contact-organization .organization label{
+    font-size: 1.4rem;
+    color: #333333;
+    font: bolder;
+}
+.contact .form-contact .contact-organization .organization input{
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 25rem;
+    outline: #542950;
+}
+.contact .address {
+    margin-top: 2rem;
+}
+.contact .address label {
+    margin-left: 8rem;
+}
+.contact .address .address-detail{
+    margin-bottom: 0.5rem;
+    margin-left: 8rem;
+}
+.contact .address .address-detail input {
+    width: 45%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    outline: none;
+}
+.contact .contact-email {
+    margin-top: 2rem;
+}
+.contact .contact-email label {
+    margin-left: 8rem;
+    margin-bottom: 1.5rem;
+}
+.contact .contact-email input {
+    width: 82%;
+    font-size: 1.5rem;
+    padding: 1rem;
+    outline: none;
+    margin-left: 8rem;
+}
+.contact .contact-signup {
+    margin-top: 2rem;
+}
+.contact .contact-signup>label {
+    margin-left: 8rem;
+    margin-bottom: 1.5rem;
+}
+.contact .contact-signup .signup-email {
+    margin-left: 8rem;
+}
+.contact .contact-signup .signup-email label  {
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+}
+.contact .contact-signup .signup-email input {
+    height: 1rem;
+    width: 1rem;
+}
+.contact .contact-submit {
+    margin-top: 2rem;
+}
+.contact .contact-submit input{
+    margin-left: 8rem;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background-color: #542950;
+    color: #f0f0f0;
+    border: #542950;
+}
+.contact .contact-comments {
+    margin-top: 3rem;
+}
+.contact .contact-comments p{
+    margin-top: 2rem;
+    color: #444245;
+    font-size: 1.5rem;
+    margin-left: 8rem;
+}
