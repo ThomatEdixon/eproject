@@ -60,7 +60,8 @@
 }
 .product-support .product-support-introduction .btn-support{
     margin-top: 2rem;
-    margin-left: 32rem;
+    margin-left: 38rem;
+    /* margin-left: 32rem; */
     height: 2rem;
     width: 25rem;
     font-size: 1.2rem;

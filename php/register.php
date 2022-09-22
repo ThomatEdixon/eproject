@@ -1,43 +1,60 @@
 <?php
-    //require_once 'connect.php';
-    $errors = [];
-    if(isset($_POST['register'])){
-        $username = htmlspecialchars($_POST['username']);
-        $conn->real_escape_string($username);
-        $email = htmlspecialchars($_POST['email']);
-        $conn->real_escape_string($email);
-        $password = htmlspecialchars($_POST['password']);
-        $conn->real_escape_string($password);
-        $confirmpassword = htmlspecialchars($_POST['confirmpassword']);
-        $conn->real_escape_string($confirmpassword);
-        if(empty($username)){
-            $errors['username'] = 'Username is required';
-        }
-        if(empty($password)){
-            $errors['password'] = 'Password is required';
-        }
-        if(empty($email)){
-            $errors['email'] = 'Email is required';
-        }
-        if($password != $confirmpassword){
-            $errors['password'] = 'Password not match';
-        }
-        $sql = "SELECT * FROM my_db_user WHERE username = '$username'";
-        $result = $conn->query($sql);
-        if($result->num_rows > 0){
-            $errors['username'] = 'Username already exists';
-        }
-        if(count($errors) == 0){
-            $sql = "insert into my_db_user values ('$username','$email',sha1('$password'))";
-            $result = $conn->query($sql);
-            if($result){
-                header('Location: login.php');
-            }else{
-                $errors['db'] = 'Error creating user';
-            }
+include 'connect.php';
+$error = [];
+if (isset($_POST['register'])) {
+    $username = htmlspecialchars($_POST['username']);
+    $email = htmlspecialchars($_POST['email']);
+    $pass = htmlspecialchars($_POST['password']);
+    $cfm_pass = htmlspecialchars($_POST['confirmpassword']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $name = htmlspecialchars($_POST['name']);
+    if (empty($username)) {
+        $error['name'] = "Bạn chưa nhập username";
+    }
+    if (empty($email)) {
+        $error['email'] = "Bạn chưa nhập email";
+    }
+    if (empty($pass)) {
+        $error['pass'] = "Bạn chưa nhập pass";
+    }
+    if (empty($cfm_pass)) {
+        $error['cfm_pass'] = "Bạn chưa nhập cfm_pass";
+    }
+    if (empty($phone)) {
+        $error['phone'] = "Bạn chưa nhập phone";
+    }
+    if ($pass != $cfm_pass) {
+        $error['check'] = "Xác nhận mật khẩu không đúng";
+    }
+    if (strlen($pass) < 4 || strlen($pass) > 20) {
+        $error['password_len'] = 'Password must be between 4 and 20 characters';
+    }
+    if (strlen($username) < 4 || strlen($username) > 20) {
+        $error['password_len'] = 'Username must be between 4 and 20 characters';
+    }
+    preg_match("/^[0-9]{10}$/", $phone, $matchh);
+    if (!$matchh) {
+        $error['phonee'] = "Phone khong hop le";
+    }
+
+
+    // $passs = sha1($pass);
+    // $cfm_passs = sha1($cfm_pass);
+    $user = mysqli_query($conn, "SELECT * from user");
+    foreach ($user as $key => $value) {
+        if ($username == $value['username']) {
+            $error['namee'] = "USER NAME ALREDY EXISTS";
         }
     }
+    if (count($error) == 0) {
+
+        $sql = "INSERT INTO `user` (`userid`, `username`, `password`, `cfm_password`, `ten_dang_nhap`, `phone`, `email`) VALUES (NULL, '$username', '$pass', '$cfm_pass', '$name', '$phone', '$email')";
+        $result = $conn->query($sql);
+        header('Location: login.php');
+    }
+}
 ?>
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 <div class="register">
     <form action="" method="post">
         <div class="vh-100" style="background-color: #eee;">
@@ -53,45 +70,61 @@
 
                                         <form class="mx-1 mx-md-4">
 
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                            <input type="text" name="username"id="form3Example1c" class="form-control" placeholder="Your Name" required />
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <input type="text" name="username" id="form3Example1c" class="form-control" placeholder="username" required />
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                            <input type="email" id="form3Example3c" name="email" class="form-control" placeholder="Your Email" required/>
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <input type="email" id="form3Example3c" name="email" class="form-control" placeholder="Your Email" required />
+                                                </div>
                                             </div>
-                                        </div>
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                            <input type="password" id="form3Example4c" class="form-control" placeholder="Password" name="password" required/>
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fa-solid fa-phone fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <input type="text" id="form3Example4c" class="form-control" placeholder="Phone" name="phone" required />
+                                                </div>
                                             </div>
-                                        </div>
-
-                                        <div class="d-flex flex-row align-items-center mb-4">
-                                            <i class="fas fa-key fa-lg me-3 fa-fw"></i>
-                                            <div class="form-outline flex-fill mb-0">
-                                            <input type="password" id="form3Example4cd" class="form-control" placeholder="Confirm Password" name="confirmpassword" required/>
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fa-regular fa-user fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <input type="text" id="form3Example3c" name="name" class="form-control" placeholder="HỌ VÀ TÊN" required />
+                                                </div>
                                             </div>
-                                        </div>
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <input type="password" id="form3Example4c" class="form-control" placeholder="Password" name="password" required />
+                                                </div>
+                                            </div>
 
-                                        <div class="form-check d-flex mb-5">
-                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
-                                            <label class="form-check-label check" for="form2Example3">
-                                            I agree all statements in <a href="#!" class="terms">Terms of service</a>
-                                            </label>
-                                        </div>
+                                            <div class="d-flex flex-row align-items-center mb-4">
+                                                <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                                                <div class="form-outline flex-fill mb-0">
+                                                    <input type="password" id="form3Example4cd" class="form-control" placeholder="Confirm Password" name="confirmpassword" required />
+                                                </div>
+                                            </div>
 
-                                        <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                                            <button type="submit" class="btn btn-primary btn-lg" name="register">Register</button>
-                                        </div>
+                                            <div class="form-check d-flex mb-5">
+                                                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" required />
+                                                <label class="form-check-label check" for="form2Example3">
+                                                    I agree all statements in <a href="#!" class="terms">Terms of service</a>
+                                                </label>
+                                            </div>
 
+                                            <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                                <button type="submit" class="btn btn-primary btn-lg" name="register">Register</button>
+                                            </div>
+                                            <span>You have account?</span><a href="login.php">Login</a>
+                                            <?php
+                                            foreach ($error as $key => $value) {
+                                                echo '<p class="text-danger">' . $value . '</p>';
+                                            }
+                                            ?>
                                         </form>
 
                                     </div>
@@ -107,5 +140,6 @@
                 </div>
             </div>
         </div>
+
     </form>
 </div>

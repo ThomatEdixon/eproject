@@ -1,0 +1,26 @@
+h5.card-title{
+  display: -webkit-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    max-height: 50px;
+    height: 50px;
+}
+
+header .phantrang{
+  padding: 5px 5px;
+  
+  position: relative;
+  bottom: 0px;
+}
+#content{
+  min-height: 100vh;
+}
+ul {
+  width: fit-content;
+    margin: auto;
+}
+
+/* ádsakid */
+/* header menu logo */

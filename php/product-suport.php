@@ -1,19 +1,8 @@
 <?php
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/product-support.css">
-    <title>Products Support</title>
-</head>
-
-<body class="product-support">
+<link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+<div class="product-support">
     <div class="header-product-support">
         <div class="product-support-title">
             <h1 class="text-center">Product Support </h1>
@@ -171,6 +160,4 @@
         <p><i>Fields marked with * are required.</i></p>
         <p><i>The box question , you can enter questions above </i></p>
     </div>
-</body>
-
-</html>
+</div>

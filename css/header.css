@@ -26,8 +26,9 @@
     margin-left: 2.5rem;
 
 }
-#header .nav #logo img{
+#header .nav #logo>img{
     /* logo */
+    margin-left: 2rem;
     max-width: 200px;
     height: auto;
 }
@@ -62,6 +63,7 @@
     opacity: 80%;
     left: 1.45rem;
     display: none;
+    width: 15rem;
     margin-top: 1rem;
     z-index: 2;
 
@@ -113,8 +115,37 @@
 
 #header .active{
   background-color: #ffffff;
+  color: #53284f;
 
 }
-#header .active a.link-product{
+#header .active a.link-active{
   color: #53284f;
+}
+#header .search form{
+  margin-top: 1.3rem;
+  margin-left: 35rem;
+}
+
+#header .search .form-search button{
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  height: 1.8rem;
+  font-size: 1.2rem;
+}
+#header .search .form-search input{
+  margin-left: 0px;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  width: 15rem;
+  padding: 3px;
+  color:#53284f;
+  font-size: 1rem;
+}
+#header .search .form-search .btn-search{
+  height: 2.5rem;
+  padding: 10px 15px;
+  margin-right: 0px;
+  border: none;
 }
