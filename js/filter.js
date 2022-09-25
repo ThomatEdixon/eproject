@@ -95,9 +95,4 @@ $(document).ready(function() {
         var valuetype= type.filter(":checked").val();
         document.querySelector('.option-type').value = valuetype;
     });
-    $('.btn-filter').click(function(e) {
-        e.preventDefault();
-        $('.product-filter-sussecc').removeClass('none');
-        $('.product-filter').addClass('none');
-    })
 })

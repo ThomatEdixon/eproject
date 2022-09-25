@@ -22,18 +22,9 @@ if (isset($_POST['login'])) {
   if (empty($password)) {
     $errors['password'] = 'Password is required';
   }
-
-  // $pass = sha1($password);
-  // var_dump($pass);
-
   if (count($errors) == 0) {
     $sql = "SELECT * FROM user where username='$username' and password = '$password'";
     $result = $conn->query($sql);
-    //$row = mysqli_fetch_assoc($result);
-    // var_dump($row['userid']);
-    // echo "<pre>";
-    // var_dump($row);
-    // die();
     if ($result->num_rows > 0) {
       if ($username == 'admin') {
         $_SESSION['userid'] = $username;
@@ -51,26 +42,13 @@ if (isset($_POST['login'])) {
         header("location:product.php?userid=$row[id]");
       }
     } else {
-      $errors['login'] = "Tên người dùng hoặc mật khẩu không hợp lệ";
+      $errors['login'] = "Username or password not match";
     }
   }
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Latest compiled and minified CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Latest compiled JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-  <title>Document</title>
-</head>
-
-<body>
+<div>
   <div class="login">
     <section class="vh-100">
       <div class="container py-5 h-100">
@@ -129,6 +107,4 @@ if (isset($_POST['login'])) {
       </div>
     </section>
   </div>
-</body>
-
-</html>
+</div>

@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">    
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fanimation</title>
-    <link rel="icon"
-        href="https://play-lh.googleusercontent.com/xWgZwsTcfbK4hmaYeRa65r7wSM4GFSKn8hbsvD6Gxx4UNQmWy4VTfcDa-g0vE6V_zk0"
-        type="image/x-icon">
+    <link rel="icon" href="https://play-lh.googleusercontent.com/xWgZwsTcfbK4hmaYeRa65r7wSM4GFSKn8hbsvD6Gxx4UNQmWy4VTfcDa-g0vE6V_zk0" type="image/x-icon">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/register.css">
@@ -21,16 +18,16 @@
     <link rel="stylesheet" href="../css/product-support.css">
     <script src="../js/jquery-3.3.1.min.js"></script>
     <script src="https://kit.fontawesome.com/58d1abb6f4.js" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/filter.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
 <body>
-    <div>
-        <div>
+    <header>
+        <div id="container1">
             <div id="header">
                 <div id="header1">
                     <nav class="nav">
@@ -44,8 +41,10 @@
                                 </div>
                                 <ul class="sub-menu">
                                     <li><a style=" color:#625d5d;" href="#" id="product-1">Products</a></li>
-                                    <li><a style=" color:#625d5d;" href="#">Menu 1</a></li>
-                                    <li><a style=" color:#625d5d;" href="#">Menu 1</a></li>
+                                    <li><a style=" color:#625d5d;" href="#" id="product-2">Fan Modern</a></li>
+                                    <li><a style=" color:#625d5d;" href="#" id="product-3">Fan Classic</a></li>
+                                    <li><a style=" color:#625d5d;" href="#" id="product-4">Fan Future</a></li>
+                                    <li><a style=" color:#625d5d;" href="#" id="product-5">Fan Popular</a></li>
                                 </ul>
                             </li>
                             <li class="list-option">
@@ -62,7 +61,6 @@
                                 <ul class="sub-menu">
                                     <li><a style=" color:#625d5d;" href="#" id="register">Register</a></li>
                                     <li><a style=" color:#625d5d;" href="#" id="login">Log in</a></li>
-                                    <li><a style=" color:#625d5d;" href="#">Menu 1</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -73,17 +71,19 @@
                                         <button class="btn-search">
                                             <i class="fa-solid fa-magnifying-glass"></i>
                                         </button>
-                                        <input type="text" name="search" placeholder="Search">
+                                        <input type="hidden" name="search">
+                                        <input type="text" name="search_information" placeholder="Search">
                                     </nav>
                                 </div>
                             </form>
+                            <div class="result-search"></div>
                         </div>
                     </nav>
                 </div>
 
             </div>
         </div>
-    </div>
+    </header>
     <section id="section"></section>
     <div class="content-functionality">
         <h4 class="content">Fanimation Catalog</h4>
@@ -150,6 +150,5 @@
         © 2020 Fanimation. All rights reserved.
     </div>
 </body>
-<script src="../js/main.js"></script>
-<script src="../js/filter.js"></script>
+
 </html>

@@ -2,116 +2,87 @@
   font-family: Open Sans;
   src: url(../font/font-open-sans/OpenSans-Regular.ttf);
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+header *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
+html{
+font-size: 100%;
+}
 /* header menu logo */
-#header #header1{
-    background-color: #53284f;
-    height: 80px;
+header #header1{
+  background-color: #53284f;
+  height: 80px;
 }
-#header .nav{
-    max-width: 1650px;
-    margin: 0px auto;
+header .nav{
+  max-width: 1650px;
+  margin: 0px auto;
 }
-#header nav{
-    display: flex;
+header nav{
+  display: flex;
 }
-#header #main-menu{
-    display: flex;
-    list-style: none;
-    margin-left: 2.5rem;
+header #main-menu{
+  display: flex;
+  list-style: none;
+  margin-left: 2.5rem;
 
 }
-#header .nav #logo>img{
-    /* logo */
-    margin-left: 2rem;
-    max-width: 200px;
-    height: auto;
+header .nav #logo img{
+  /* logo */
+  max-width: 200px;
+  height: auto;
 }
-#header #logo{
-    padding: 5px 0px;
-    margin-top: 0.6rem;
+header #logo{
+  padding: 5px 0px;
+  margin-top: 0.6rem;
 }
-#header #main-menu li {
-    position: relative;
+header #main-menu li {
+  position: relative;
+height: 80px;
 }
-#header #main-menu li a{
-    /* color: white; */
-    text-decoration: none;
-    display: block;
-    padding: 25px 25px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: 600;
-    height: 3.5rem;
-}
-#header .linkheader a{
-  color: #ffffff;
-}
-
+header #main-menu li a{
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 25px 25px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  height: 3.5rem;
+} 
 /* sub menu */
-#header #main-menu ul.sub-menu{
-    position: absolute;
-    background-color: #ebeaea;
-    padding: 15px 0px;
-    list-style: none;
-    width: 12rem;
-    border-radius: 5px;
-    opacity: 80%;
-    left: 1.45rem;
-    display: none;
-    width: 15rem;
-    margin-top: 1rem;
-    z-index: 2;
+header #main-menu ul.sub-menu{
+  position: absolute;
+  background-color: #ebeaea;
+  padding: 15px 0px;
+  list-style: none;
+  width: 14rem;
+  border-radius: 5px;
+  opacity: 80%;
+  left: 1.45rem;
+  display: none;
+  margin-top: 1rem;
+  z-index: 2;
+}
+header #main-menu ul.sub-menu a{
+  padding: 10px 30px;
+}
+header #main-menu li:hover ul.sub-menu{
+  display: block;
 
 }
-#header #main-menu ul.sub-menu a{
-    padding: 10px 30px;
+ 
+/* ANH HEADER */
+
+header .icon_add{
+  position: absolute;
+  top:4%;
+  left: 97%;
 }
-#header #main-menu li:hover ul.sub-menu{
-    display: block;
-  
+header .icon_add .bx{
+font-size: 2rem;
+color: whitesmoke;
 }
-
-/* hover gach duoi */
-#header a,a:hover{
-    -webkit-backface-visibility:hidden;
-            backface-visibility:hidden;
-    /* position:relative; */
-    transition:0.5s color ease;
-    text-decoration:none;
-    
-  }
-
-  #header .linkheader a:after{
-    content: "";
-    transition:0.5s all ease;
-    -webkit-backface-visibility:hidden;
-            backface-visibility:hidden;
-    position:absolute;
-  }
-
-  #header .linkheader a:after{
-    bottom: -0.01rem;
-  }
-  #header .linkheader a:after{
-    height:5px;
-    height:0.15rem;
-    width:0;
-    background:white;
-  }
-  
-  #header .linkheader a:after{
-    left:50%;
-    -webkit-transform:translateX(-50%);
-            transform:translateX(-50%);
-  }
-  #header a.linkheader:hover:after{
-    width:60%;
-  }
 
 #header .active{
   background-color: #ffffff;

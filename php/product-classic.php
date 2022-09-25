@@ -15,13 +15,11 @@ if (!isset($_GET['page'])) {
     $cr_page = (int)$_GET['page'];
 }
 $start = ($cr_page - 1) * $limit;
-$product = mysqli_query($conn, "SELECT * FROM product LIMIT $start,$limit");
-
+$product = mysqli_query($conn, "SELECT product.productid , product.name , product.price , product.brandid , product.typeid , product.categoryid, product.image , product.ProductDescription, FROM product inner join category  on product.categoryid = category.categoryid   WHERE category.namecategory = 'Classic' LIMIT $start,$limit");
 
 ?>
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="../css/product.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <div class="product">
     <div class="header-product">
         <div class="product-title">

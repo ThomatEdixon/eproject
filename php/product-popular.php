@@ -15,8 +15,7 @@ if (!isset($_GET['page'])) {
     $cr_page = (int)$_GET['page'];
 }
 $start = ($cr_page - 1) * $limit;
-$product = mysqli_query($conn, "SELECT * FROM product LIMIT $start,$limit");
-
+$product = mysqli_query($conn, "SELECT product.productid , product.name , product.price , product.brandid , product.typeid , product.categoryid, product.image , product.ProductDescription, FROM product inner join category  on product.categoryid = category.categoryid   WHERE category.namecategory = 'Popular' LIMIT $start,$limit");
 
 ?>
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">

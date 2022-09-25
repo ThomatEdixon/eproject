@@ -1,5 +1,33 @@
 <?php
 
+use LDAP\Result;
+
+require_once 'connect.php';
+$error = [];
+if (isset($_POST['support'])) {
+    $fullname = htmlspecialchars($_POST['fullname']);
+    $phone = htmlspecialchars($_POST['phone']);
+    $email = htmlspecialchars($_POST['email']);
+    $problem = htmlspecialchars($_POST['problem']);
+    if (empty($fullname)) {
+        $error['fullname'] = 'Fullname is required';
+    }
+    if (empty($phone)) {
+        $error['phone'] = 'Phone Number is required';
+    }
+    if (empty($email)) {
+        $error['email'] = 'Email is required';
+    }
+}
+if (count($error) == 0) {
+    $sql = "INSERT INTO support values( '$fullname' , '$phone' , '$email' , '$problem' )";
+    $result = $conn->query($sql);
+    if ($result) {
+        header('location: product.php');
+    } else {
+        die();
+    }
+}
 ?>
 <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
 <div class="product-support">
@@ -152,8 +180,14 @@
                 </div>
             </div>
             <div class="form-support-submit">
+                <input type="hidden" name="support">
                 <input type="submit" name="submit-support" value="Submit">
             </div>
+            <?php
+            foreach ($errors as $key => $value) {
+                echo '<p class="text-danger">' . $value . '</p>';
+            }
+            ?>
         </form>
     </div>
     <div class="support-comments">
